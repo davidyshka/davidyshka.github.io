@@ -1,0 +1,148 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "base"
+
+// Header
+.header
+    min-height: 100vh
+    height: 100%
+    width: 100%
+    &__menu
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+
+        margin: 0 0 71px 0
+        padding-top: 40px
+// Header Menu
+.nav
+    &__links
+        text-transform: uppercase
+        transition: all .2s ease
+        &
+            margin-right: 40px
+        &:hover
+            border-bottom: 1px solid #fff
+            text-shadow: 0px 0px 10px #00DCFF80
+
+.language
+    margin-right: 80px
+    color: #707070
+    text-decoration: underline
+
+// Header slider
+.header__slider
+    margin-bottom: 69px
+    &-item
+        position: relative
+        width: 100%
+        max-width: 688px
+        margin: 0 auto
+        &::before,
+        &::after
+            content: ''
+            position: absolute
+            width: 16px
+            height: 40px
+            cursor: pointer
+        &::before
+             background: url("../images/top-arrow.svg") center no-repeat
+             top: 48px
+             right: -32px
+        &::after
+             background: url("../images/bottom-arrow.svg") center no-repeat
+             bottom: 48px
+             right: -32px
+
+            
+
+.header__slider-img
+    width: 100%
+    max-width: 688px
+    height: auto
+
+// Menu BTN
+.show__menu-link
+    height: 16px
+    width: 24px
+    display: inline-block
+    position: absolute
+    top: -50%
+    transform: translateY(-50%)
+
+   
+
+.show__menu-btn,
+    &::before,
+    &::after
+        display: inline-block
+        content: ''
+        background-color: #ffffff
+        position: absolute
+        
+.show__menu-btn
+    display: inline-block
+    height: 1px
+    width: 16px
+    position: relative
+    background-color: #ffffff
+    bottom: 5px
+    right: 0px
+    transform: rotate(180deg)
+    &::before,
+    &::after
+        width: 24px
+        height: 1px
+    &::before
+        transform: translateY(-6.5px)
+    &::after
+        transform: translateY(6.5px)
+
+// weekend
+
+.weekend
+    margin: 0 auto 0 auto
+    width: 100%
+    max-width: 688px
+    &__date
+        font-size: 28px;
+        letter-spacing: 0.05em;
+        margin-bottom: 4px
+        color: transparent;
+        text-shadow: 0px 0px 20px #00dcff;
+        -webkit-text-stroke: 1px #fff;
+    &__text
+        text-transform: uppercase
+        font-size: 19px;
+        letter-spacing: 0.1em;
+        color: #fcfcfc;
+
+
+
+
+.allEvents
+    display: block
+    text-transform: uppercase
+    font-size: 17px;
+    letter-spacing: 0.1em;
+    left: 50%
+    bottom: 10px
+    transform: translate(-50%)
+    position: absolute
+    cursor: pointer
+    &::before
+        content: ''
+        position: absolute
+        left: 50%
+        top: -11px
+        transform: translateX(-50%)
+        width: 48px;
+        height: 1px;
+       
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px 0px 10px #00dcff;
+
+
+@import "media"
