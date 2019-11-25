@@ -24,6 +24,7 @@
 
 		&__menu
 			flex-direction: column
+			max-width: 375px
 			margin: 0 auto 71px auto
 
 	.nav
@@ -38,24 +39,6 @@
 	.header__slider-item:after, .header__slider-item:before
 		display: none
 
-	.weekend
-    margin: 0 auto 0 auto
-    width: 100%
-    max-width: 688px
-    &__date
-        font-size: 28px;
-        letter-spacing: 0.05em;
-        margin-bottom: 4px
-        color: transparent;
-        text-shadow: 0px 0px 20px #00dcff;
-        -webkit-text-stroke: 1px #fff;
-    &__text
-        text-transform: uppercase
-        font-size: 19px;
-        letter-spacing: 0.1em;
-        color: #fcfcfc;
-
-
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767.98px)
 	.header
@@ -65,6 +48,7 @@
 
 		&__menu
 			flex-direction: column
+			max-width: 414px
 			margin: 0 auto 71px auto
 
 	.nav
@@ -80,9 +64,3 @@
 
 		&__logo
 			margin-bottom: 20px
-
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px)
-	.allEvents
-		
