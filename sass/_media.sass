@@ -15,10 +15,11 @@
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px)
+	
 	.container
-		width: 90%
+		max-width: 370px
 	.header
-
+		
 		&__logo
 			margin-bottom: 20px
 
@@ -42,16 +43,32 @@
 	.grid
 		display: flex
 		flex-wrap: wrap
+		justify-content: center
 		&__title
-		
+			font-size: 17px
+			padding-left: 0
 		&__item
-			margin-bottom: 50px
+			margin-bottom: 70px
+			max-height: 300px
+			flex-basis: 300px
 		&__img
+			object-fit: cover
+		
 			
 	//spendTime 
 	.spendTime
 		background-attachment: scroll
 		margin-bottom: 50px
+		&__title
+			font-size: 17px
+			max-width: 300px
+		&__text
+			font-size: 14px
+			max-width: 300px
+		
+		&__wrapper
+			mrgin: 0
+			
 	// Last
 	.last
 		&__title
@@ -61,8 +78,13 @@
 			margin-bottom: 10px
 		&__wrapper
 			margin-bottom: 10px
-	.container
-		max-width: 490px
+	
+	.bookNow
+		margin-bottom: 20px
+	.footer
+		flex-wrap: wrap
+		font-size: 12px
+		
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767.98px)
@@ -81,7 +103,22 @@
 	.language
 		margin-right: 30px
 
+	.grid
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	&__title
+		font-size: 17px
+		padding-left: 0
+	&__item
+		margin-bottom: 70px
+		max-height: 300px
+		flex-basis: 300px
+	&__img
+		object-fit: cover
+
 	
+			
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px)
