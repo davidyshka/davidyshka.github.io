@@ -19,6 +19,7 @@
 	.container
 		max-width: 370px
 	.header
+		min-height: inherit
 		
 		&__logo
 			margin-bottom: 20px
@@ -84,6 +85,8 @@
 	.footer
 		flex-wrap: wrap
 		font-size: 12px
+	.last__title
+		left: 0
 		
 
 // Small devices (landscape phones, 576px and up)
@@ -116,6 +119,8 @@
 		flex-basis: 300px
 	&__img
 		object-fit: cover
+	.last__title
+		left: 0
 
 	
 			
@@ -126,3 +131,11 @@
 
 		&__logo
 			margin-bottom: 20px
+	.last__title
+		left: 0
+
+@media only screen and (max-width : 1200px)
+	.header
+		min-height: inherit
+	.last__title
+		left: 0
