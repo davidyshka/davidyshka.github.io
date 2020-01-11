@@ -1,0 +1,230 @@
+@import "fonts"
+@import "vars"
+@import "base"
+@import "libs"
+
+
+
+// sidebar
+.sidebar
+    height: 100vh
+    width: 100px
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: absolute
+    z-index: 1
+    background-color: #fff
+    box-shadow: 15px 0 25px rgba(219, 219, 219, 0.50)
+.logo__link
+    display: inline
+    margin: 33px 0 70px
+.main__item:not(:last-child)
+    margin-bottom: 50px
+.inbox
+    margin: auto 0 100px
+// burge menu btn
+
+.menu-btn
+    display: block
+    width: 50px
+    height: 50px
+    background-color: #fff
+    box-shadow: 0px 0px 25px 0px rgba(219, 219, 219, 0.50)
+    border-radius: 50%
+    position: absolute
+    top: 50px
+    right: 55px
+    z-index: 999
+    display: flex
+    justify-content: center
+    align-items: center
+    & span,
+    & span::before,
+    & span::after
+        position: absolute
+        width: 15px
+        height: 3px
+        background-color: $blue
+        border-radius: 10px
+        
+    & span::before,
+    & span::after
+        content: ""
+        transition: 0.2s
+    & span::before
+        transform: translateY(-5px)
+    & span::after
+        transform: translateY(5px)
+    &__active span
+        height: 0
+    &__active span::before
+        transform: rotate(40deg)
+        
+    &__active span::after
+        transform: rotate(-40deg)
+//Menu
+.nav
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    z-index: 998
+    right: -370px
+    min-height: 100vh
+    width: 370px
+    text-transform: uppercase
+    box-shadow: 10px 0 25px #999
+    background-color: #fff
+    transition: right 0.7s ease
+    &__active
+        right: 0px
+ 
+    &__menu
+        display: flex
+        padding: 0 40px
+        flex-direction: column
+        position: fixed
+        z-index: 999
+        min-width: 320px
+        &-item
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            &:not(:nth-of-type(5))
+                margin-bottom: 60px
+        &-link
+            color: $defaultColor
+            font-size: 18px
+            display: block
+            display: flex
+            align-items: center
+            transition: color .3s ease
+            white-space: nowrap
+            
+            &:hover
+                color: $blue
+        &-img
+           padding-left: 30px
+
+// ShowAll
+.showAll
+    text-transform: uppercase
+    color: $blue
+    transition: border 0.2s ease
+    display: block
+    position: absolute
+    bottom: 50px
+    text-align: center
+    &:hover::after
+        display: block
+        position: absolute
+        content: ""
+        bottom: -5px
+        height: 2px
+        width: 100%
+        background-color: $blue
+        
+
+    
+            
+    
+                
+// slider
+.slider
+    height: 100%
+    width: 100%
+    &__item
+       height: 100%
+       width: 100%
+       background-size: cover
+       background-repeat: no-repeat
+       background-position: bottom
+       flex-direction: column
+       align-items: center
+       font-family: $defaultFont
+       padding-left: 100px
+    &__title
+        font-size: 220px
+        padding-top: 50px
+        margin-bottom: 30px
+        font-weight: 300
+        letter-spacing: 0.25px
+    &__text
+        font-size: 36px
+        font-weight: 300
+        letter-spacing: 0.25px
+        margin-bottom: 30px
+    &__btn
+        outline: none
+        font-size: 18px
+        font-weight: 900
+        color: #fff
+        display: inline-block
+        background-color: $blue
+        width: 220px
+        height: 55px
+        padding-top: 17px
+        border-radius: 30px
+        text-align: center
+        transition: background .3s ease
+        text-transform: uppercase
+        &:hover
+            background-color: #031bb4
+//SLICK DOTS
+.slick-dots 
+    position: absolute
+    bottom: 101px
+    right: 210px
+    text-align: end
+    display: inline-block
+    padding: 0
+    list-style: none
+.slick-dots li 
+    position: relative
+    display: inline-block
+    width: 14px
+    height: 14px
+    padding: 0
+    margin-right: 25px 
+    cursor: pointer
+    border: 3px solid #9c9393
+    border-radius: 100%
+.slick-dots li:hover
+    border: 3px solid #464646
+
+
+.slick-dots li button 
+    display: none
+
+.slick-dots li button:before
+    position: relative
+    width: 14px
+    height: 14px
+    background-color: $blue
+    border-radius: 100%
+    text-align: center
+    color: black
+    -webkit-font-smoothing: antialiased
+
+.slick-dots li.slick-active
+    border-color: $blue
+    background-color: $blue
+
+.slick-dots li button:hover,
+.slick-dots li button:focus 
+    outline: none
+
+
+//  fontawesome
+.fa
+    color: #d8d8d8
+    font-size: 25px
+    height: auto
+    transition: color .3s ease
+    
+.fa:hover
+    color: $blue
+    
+
+@import "media"
